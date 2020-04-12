@@ -1,5 +1,11 @@
-@()
+@(filenames: List[String])
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
-}
+  @main("Welcome to Play") {
+    <h1>Welcome to Play!</h1>
+
+    <ul>
+      @for(filename <- filenames) {
+        <li><a href="@(s"/play/$filename")">@filename</a></li>
+      }
+    </ul>
+  }

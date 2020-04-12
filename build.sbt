@@ -3,7 +3,11 @@ organization := "com.devraccoon"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, DebianPlugin)
+
+maintainer in Linux := "Dmytro Mykhailov <dmytro.mykhailov@devraccoon.com>"
+packageSummary in Linux := "Simple play application to play video files from a folder"
+packageDescription := "Web application for playing video files from folder."
 
 scalaVersion := "2.13.1"
 
