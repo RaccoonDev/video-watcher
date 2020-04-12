@@ -1,11 +1,14 @@
 @(filenames: List[String])
 
-  @main("Welcome to Play") {
-    <h1>Welcome to Play!</h1>
+@main("Welcome to Play") {
+  <div class="container content">
+    <h1 class="title">Welcome to Video Watcher!</h1>
 
     <ul>
-      @for(filename <- filenames) {
-        <li><a href="@(s"/play/$filename")">@filename</a></li>
-      }
+    @for(filename <- filenames) {
+      <li><a href="@(s"/play/$filename")">@filename</a></li>
+    }
     </ul>
-  }
+
+  </div>
+}
